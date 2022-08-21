@@ -44,7 +44,7 @@
         </div>
     </header>
     <section class="w-9/12 mx-auto pb-40">
-        <div class="grid grid-cols-2 gap-4">
+        <div class="grid grid-cols-2 gap-4 divide-x">
             <div class="grid grid-cols-2 gap-2 mt-3 ">
                 <div>
                     <div class="card card-compact h-full bg-base-100 shadow-xl">
@@ -53,7 +53,7 @@
                             <h2 class="card-title">Bags js</h2>
                             <p>price $<span>100</span></p>
                             <div class="card-actions justify-end">
-                                <button class="btn btn-primary">Buy Now</button>
+                                <button onclick="addToCart(this) " class="btn btn-primary">Buy Now</button>
                             </div>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                             <h2 class="card-title">Shoes js</h2>
                             <p>price $<span>105</span></p>
                             <div class="card-actions justify-end">
-                                <button class="btn btn-primary">Buy Now</button>
+                                <button onclick="addToCart(this) " class="btn btn-primary">Buy Now</button>
                             </div>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
                             <h2 class="card-title">Phone cover js</h2>
                             <p>price $<span>50</span></p>
                             <div class="card-actions justify-end">
-                                <button class="btn btn-primary">Buy Now</button>
+                                <button onclick="addToCart(this) " class="btn btn-primary">Buy Now</button>
                             </div>
                         </div>
                     </div>
@@ -90,7 +90,7 @@
                             <h2 class="card-title">Watch js</h2>
                             <p>price $<span>150</span></p>
                             <div class="card-actions justify-end">
-                                <button class="btn btn-primary">Buy Now</button>
+                                <button onclick="addToCart(this) " class="btn btn-primary">Buy Now</button>
                             </div>
                         </div>
                     </div>
@@ -102,15 +102,34 @@
                             <h2 class="card-title">Playstation js</h2>
                             <p>price $<span>200</span></p>
                             <div class="card-actions justify-end">
-                                <button class="btn btn-primary">Buy Now</button>
+                                <button onclick="addToCart(this) " class="btn btn-primary">Buy Now</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
             </div>
-            <!-- ... -->
-            <div></div>
+
+
+            <div>
+                <h2 class="text-3xl text-center">Total added products <span id="total-added-product"
+                        class="text-violet-900">0</span></h2>
+                <div class="overflow-x-auto">
+                    <table class="table table-zebra w-full">
+                        <!-- head -->
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Name</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-products">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </section>
     <script src="./js/app.js"></script>
